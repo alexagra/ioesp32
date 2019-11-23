@@ -1,0 +1,26 @@
+#######################################
+# Syntax Coloring Map For IOesp
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+IOesp		KEYWORD1
+Input		KEYWORD1
+Output		KEYWORD1
+Pwm		KEYWORD1
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+on		KEYWORD2
+off		KEYWORD2
+blink		KEYWORD2
+readAN		KEYWORD2
+read		KEYWORD2
+onAN		KEYWORD2
+smoothOn	KEYWORD2
+smoothOff	KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
+
