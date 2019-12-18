@@ -5,10 +5,12 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-IOesp		KEYWORD1
-Input		KEYWORD1
-Output		KEYWORD1
-Pwm		KEYWORD1
+IOesp		  KEYWORD1
+Input		  KEYWORD1
+Output	  KEYWORD1
+Pwm		    KEYWORD1
+Output_n	KEYWORD1
+
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
