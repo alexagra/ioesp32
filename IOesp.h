@@ -10,17 +10,18 @@
 
 void wait(float);
 
-class Input
+class Input   //all pins except 34-39 are pulldown ,for pull up use - pinMode(pin,INPUT_PULLUP)- to setup
 {
 
 private:
-	int pinIn;
+	int pinIn; 
 	int value;
 
 public:
-	Input( int);
+	Input( int); 
 	int read();
 	int readAN();
+
 };
 class Output
 {
@@ -36,10 +37,21 @@ public:
 	void on();
 	void off();
 	void blink(int, float);
-	void onNL();
-	void offNL();
+	
 	
 
+};
+class Output_n
+{
+private:
+	int pinOut;
+
+
+public:
+	Output_n(int);
+	void on();
+	void off();
+	void blink(int, float);
 };
 
 class Pwm
@@ -49,6 +61,8 @@ public:
 	void onAN(int);
 	void smoothOn(float);
 	void smoothOff(float);
+	void off();
+	void on();
 
 
 private:
