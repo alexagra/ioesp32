@@ -7,7 +7,7 @@ Input::Input(int pin)
 {
 
 	pinIn = pin;
-	pinMode(pinIn, INPUT);
+	pinMode(pinIn, INPUT_PULLDOWN);
 
 }
 
@@ -43,6 +43,8 @@ int Input::readAN()
 	return value;
 }
 
+
+
 void Output::on()
 {
 
@@ -68,16 +70,39 @@ void Output::blink(int times, float delays)
 	}
 
 }
+Output_n::Output_n(int pin)
+{
+	pinOut = pin;
+	digitalWrite(pinOut, HIGH);
+	pinMode(pinOut, OUTPUT);
+}
 
-void Output::onNL()
+void Output_n::on()
 {
 	digitalWrite(pinOut, LOW);
+
 }
 
-void Output::offNL()
+void Output_n::off()
 {
 	digitalWrite(pinOut, HIGH);
+
 }
+
+void Output_n::blink(int times, float delays)
+{
+	int delayms = delays * 1000;
+	for (int i = 0; i < times; i++)
+	{
+		digitalWrite(pinOut, LOW);
+		delay(delayms);
+		digitalWrite(pinOut, HIGH);
+		delay(delayms);
+
+	}
+}
+
+
 
 void Pwm::onAN(int val)
 {
@@ -110,8 +135,21 @@ void Pwm::smoothOff(float xr)
 
 }
 
+void Pwm::off()
+{
+	ledcWrite(chan, 0);
+}
+
+void Pwm::on()
+{
+	ledcWrite(chan, 255);
+
+}
+
 
 void wait(float x)
 {
 	delay(x * 1000);
 }
+
+
