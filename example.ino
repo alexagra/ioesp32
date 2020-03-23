@@ -24,6 +24,6 @@ void loop()
   led2.onAN(125); //analogWrite 0-254
   led2.smoothOn(4);
   led2.smoothOff(2); //seconds
- 
+  wait(1);
 
 }
