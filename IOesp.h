@@ -18,7 +18,7 @@ private:
 	int value;
 
 public:
-	Input( int); 
+	Input( int,int); 
 	int read();
 	int readAN();
 
