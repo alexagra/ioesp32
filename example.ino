@@ -1,6 +1,6 @@
 #include <IOesp.h>
 
-Input button(13);    //pin
+Input button(13,PULLDOWN);    //pin,PULLDOWN or PULLDOWN
 Output led1(2);
 Pwm led2(4,1);      //pin,channel
 
