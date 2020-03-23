@@ -3,11 +3,14 @@
 
 
 
-Input::Input(int pin)
+Input::Input(int pin,int res)
 {
 
 	pinIn = pin;
-	pinMode(pinIn, INPUT_PULLDOWN);
+	if(res == 8)
+		pinMode(pinIn, INPUT_PULLDOWN);
+	else if(res == 4)
+		pinMode(pinIn, INPUT_PULLUP);
 
 }
 
