@@ -1,3 +1,3 @@
 # IOesp
-esp microcontroler library,
-basic commands with easier way for clean and understandable code
+esp32 library,
+basic commands with easier way!
