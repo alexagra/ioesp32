@@ -37,7 +37,8 @@ public:
 	void on();
 	void off();
 	void blink(int, float);
-	
+	int read();
+
 	
 
 };
@@ -52,6 +53,8 @@ public:
 	void on();
 	void off();
 	void blink(int, float);
+	int read();
+
 };
 
 class Pwm
