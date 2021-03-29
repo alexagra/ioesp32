@@ -73,6 +73,11 @@ void Output::blink(int times, float delays)
 	}
 
 }
+
+int Output::read()
+{
+	return digitalRead(pinOut);
+}
 Output_n::Output_n(int pin)
 {
 	pinOut = pin;
@@ -105,7 +110,10 @@ void Output_n::blink(int times, float delays)
 	}
 }
 
-
+int Output_n::read()
+{
+	return !digitalRead(pinOut);
+}
 
 void Pwm::onAN(int val)
 {
